@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/get_lottery_info_bs_tv"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:textColor="#FF0000"
+        android:textSize="20dp"
+        android:text="大小连击状态(未获取)"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/get_lottery_info_sd_tv"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:textColor="#FF0000"
+        android:textSize="20dp"
+        android:text="单双连击状态(未获取)"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/get_lottery_info_bs_tv"/>
+
+    <TextView
+        android:id="@+id/get_lottery_info_snum_tv"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:textColor="#FF0000"
+        android:textSize="20dp"
+        android:text="连续数字状态(未获取)"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/get_lottery_info_sd_tv"/>
+
+    <TextView
+        android:id="@+id/get_lottery_snumlist_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="#0000FF"
+        android:textSize="16dp"
+        android:text="开奖号码(未获取)"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/get_lottery_info_snum_tv"/>
+
+    <ProgressBar
+        android:id="@+id/loading_pb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/get_lottery_info_sd_tv"
+        app:layout_constraintBottom_toTopOf="@+id/get_lottery_state_tv"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/get_lottery_state_tv"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:text="手动获取当前状态"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:textColor="#000000"
+        android:background="#AAAAAA"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="50dp"/>
+
+</android.support.constraint.ConstraintLayout>
